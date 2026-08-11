@@ -144,8 +144,4 @@ Images/            PCB, schematic and selected design-rule images
 Manufacturing/     Rev A Gerber X2 and NC Drill fabrication package
 ```
 
-The public repository is intentionally kept concise so the design can be reviewed quickly, while the editable Altium sources remain available for deeper technical inspection.
-
----
-
 **Designed by Caoilte Donohoe**
