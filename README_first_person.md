@@ -34,18 +34,17 @@ I treated the PCB as a **high-speed design**, with the layout driven by signal-i
 
 The main design methods I used were:
 
-- **Controlled impedance:** I created dedicated Altium impedance profiles for 90 Ω USB and 100 Ω Ethernet differential routing.
-- **Differential-pair classes:** I separated the USB 2.0, USB 3.x and Ethernet MDI signals into dedicated classes so I could apply interface-specific constraints consistently.
-- **Length matching:** I used matched-length rules to control skew within the high-speed differential pairs, with separate Ethernet pair-to-pair matching constraints.
-- **Continuous reference planes:** I routed the high-speed signals primarily on the outer signal layer over an adjacent solid ground reference plane.
-- **Layer restrictions:** I constrained the high-speed classes to the intended routing layers to avoid unnecessary layer changes and reference-plane discontinuities.
-- **Controlled spacing and clearance:** I used dedicated rules for pair geometry, pair-to-pair spacing and clearance from unrelated copper.
-- **Via control:** I defined separate via styles for general and higher-current power routing.
-- **Power integrity:** I used local power pours, short decoupling paths and large ground regions around the LAN7800 and its regulators.
-- **Manufacturing constraints:** I included minimum annular ring, drilled-hole, solder-mask and silkscreen rules in the PCB rule set.
-- **Rule-driven verification:** I used Altium's PCB Rules and Constraints system and DRC to check that the physical implementation remained consistent with the design intent.
+- **Controlled impedance:** dedicated Altium impedance profiles were created for 90 Ω USB and 100 Ω Ethernet differential routing.
+- **Differential-pair classes:** USB 2.0, USB 3.x and Ethernet MDI signals were separated into dedicated classes so interface-specific constraints could be applied consistently.
+- **Length matching:** matched-length rules were used to control skew within high-speed differential pairs, with separate Ethernet pair-to-pair matching constraints.
+- **Continuous reference planes:** the high-speed signals are routed primarily on the outer signal layer over an adjacent solid ground reference plane.
+- **Layer restrictions:** high-speed classes were constrained to intended routing layers to avoid unnecessary layer changes and reference-plane discontinuities.
+- **Controlled spacing and clearance:** dedicated rules were used for pair geometry, pair-to-pair spacing and clearance from unrelated copper.
+- **Via control:** separate via styles were defined for general and higher-current power routing.
+- **Power integrity:** local power pours, short decoupling paths and large ground regions were used around the LAN7800 and its regulators.
+- **Manufacturing constraints:** minimum annular ring, drilled-hole, solder-mask and silkscreen rules were included in the PCB rule set.
+- **Rule-driven verification:** Altium's PCB Rules and Constraints system and DRC were used to check that the physical implementation remained consistent with the design intent.
 
-> **Design status:** This repository presents my Rev A schematic, PCB layout and fabrication design intent. It does not claim production or laboratory signal-integrity validation.
 
 ## PCB Layout
 
