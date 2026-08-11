@@ -14,18 +14,19 @@ I developed the project to demonstrate the complete hardware design process rath
 
 ### Key design features
 
-- I used the Microchip **LAN7800** USB 3.1 Gen 1 to Gigabit Ethernet controller
-- I implemented USB 2.0 and USB 3.x interfaces
-- I routed the Gigabit Ethernet MDI interface to an RJ45 MagJack
-- I used a **4-layer PCB** with dedicated internal ground reference planes
-- I targeted **90 Ω differential impedance** for USB
-- I targeted **100 Ω differential impedance** for Gigabit Ethernet
-- I created dedicated Altium **net classes, differential-pair classes and routing rules**
-- I applied length matching and controlled pair spacing to the high-speed interfaces
-- I used separate power routing and pours for the LAN7800 supply rails
-- I positioned ESD/protection components close to the external interfaces
-- I prepared the fabrication drawing and manufacturing outputs
-- I checked the final PCB using Altium DRC
+
+- Microchip **LAN7800** USB 3.1 Gen 1 to Gigabit Ethernet controller
+- USB 2.0 and USB 3.x interfaces
+- Gigabit Ethernet MDI interface to RJ45 MagJack
+- **4-layer PCB** with dedicated internal ground reference planes
+- **90 Ω differential impedance** target for USB
+- **100 Ω differential impedance** target for Gigabit Ethernet
+- Dedicated Altium **net classes, differential-pair classes and routing rules**
+- Length matching and controlled pair spacing for high-speed interfaces
+- Separate power routing/pours for the LAN7800 supply rails
+- ESD/protection components positioned close to the external interfaces
+- Fabrication drawing and manufacturing output preparation
+- Final PCB checked using Altium DRC
 
 ## High-Speed Design Approach
 
@@ -33,18 +34,17 @@ I treated the PCB as a **high-speed design**, with the layout driven by signal-i
 
 The main design methods I used were:
 
-- **Controlled impedance:** I created dedicated Altium impedance profiles for 90 Ω USB and 100 Ω Ethernet differential routing.
-- **Differential-pair classes:** I separated the USB 2.0, USB 3.x and Ethernet MDI signals into dedicated classes so I could apply interface-specific constraints consistently.
-- **Length matching:** I used matched-length rules to control skew within the high-speed differential pairs, with separate Ethernet pair-to-pair matching constraints.
-- **Continuous reference planes:** I routed the high-speed signals primarily on the outer signal layer over an adjacent solid ground reference plane.
-- **Layer restrictions:** I constrained the high-speed classes to the intended routing layers to avoid unnecessary layer changes and reference-plane discontinuities.
-- **Controlled spacing and clearance:** I used dedicated rules for pair geometry, pair-to-pair spacing and clearance from unrelated copper.
-- **Via control:** I defined separate via styles for general and higher-current power routing.
-- **Power integrity:** I used local power pours, short decoupling paths and large ground regions around the LAN7800 and its regulators.
-- **Manufacturing constraints:** I included minimum annular ring, drilled-hole, solder-mask and silkscreen rules in the PCB rule set.
-- **Rule-driven verification:** I used Altium's PCB Rules and Constraints system and DRC to check that the physical implementation remained consistent with the design intent.
+- **Controlled impedance:** dedicated Altium impedance profiles were created for 90 Ω USB and 100 Ω Ethernet differential routing.
+- **Differential-pair classes:** USB 2.0, USB 3.x and Ethernet MDI signals were separated into dedicated classes so interface-specific constraints could be applied consistently.
+- **Length matching:** matched-length rules were used to control skew within high-speed differential pairs, with separate Ethernet pair-to-pair matching constraints.
+- **Continuous reference planes:** the high-speed signals are routed primarily on the outer signal layer over an adjacent solid ground reference plane.
+- **Layer restrictions:** high-speed classes were constrained to intended routing layers to avoid unnecessary layer changes and reference-plane discontinuities.
+- **Controlled spacing and clearance:** dedicated rules were used for pair geometry, pair-to-pair spacing and clearance from unrelated copper.
+- **Via control:** separate via styles were defined for general and higher-current power routing.
+- **Power integrity:** local power pours, short decoupling paths and large ground regions were used around the LAN7800 and its regulators.
+- **Manufacturing constraints:** minimum annular ring, drilled-hole, solder-mask and silkscreen rules were included in the PCB rule set.
+- **Rule-driven verification:** Altium's PCB Rules and Constraints system and DRC were used to check that the physical implementation remained consistent with the design intent.
 
-> **Design status:** This repository presents my Rev A schematic, PCB layout and fabrication design intent. It does not claim production or laboratory signal-integrity validation.
 
 ## PCB Layout
 
@@ -66,7 +66,7 @@ I used the bottom side for local power distribution together with a broad GND co
 
 ## Schematic
 
-I split the design into two functional sheets: **USB/power** and **LAN7800/Ethernet**.
+The design is split into two functional sheets: **USB/power** and **LAN7800/Ethernet**.
 
 <p align="center">
   <img src="Images/Schematic_Overview.png" alt="LAN7800 and Ethernet schematic overview" width="780">
@@ -143,9 +143,5 @@ Docs/              Schematic and fabrication PDFs
 Images/            PCB, schematic and selected design-rule images
 Manufacturing/     Rev A Gerber X2 and NC Drill fabrication package
 ```
-
-I have intentionally kept the public repository concise so the design can be reviewed quickly, while the editable Altium sources remain available for deeper technical inspection.
-
----
 
 **Designed by Caoilte Donohoe**
