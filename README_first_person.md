@@ -66,7 +66,7 @@ I used the bottom side for local power distribution together with a broad GND co
 
 ## Schematic
 
-I split the design into two functional sheets: **USB/power** and **LAN7800/Ethernet**.
+The design is split into two functional sheets: **USB/power** and **LAN7800/Ethernet**.
 
 <p align="center">
   <img src="Images/Schematic_Overview.png" alt="LAN7800 and Ethernet schematic overview" width="780">
