@@ -14,18 +14,19 @@ I developed the project to demonstrate the complete hardware design process rath
 
 ### Key design features
 
-- I used the Microchip **LAN7800** USB 3.1 Gen 1 to Gigabit Ethernet controller
-- I implemented USB 2.0 and USB 3.x interfaces
-- I routed the Gigabit Ethernet MDI interface to an RJ45 MagJack
-- I used a **4-layer PCB** with dedicated internal ground reference planes
-- I targeted **90 Ω differential impedance** for USB
-- I targeted **100 Ω differential impedance** for Gigabit Ethernet
-- I created dedicated Altium **net classes, differential-pair classes and routing rules**
-- I applied length matching and controlled pair spacing to the high-speed interfaces
-- I used separate power routing and pours for the LAN7800 supply rails
-- I positioned ESD/protection components close to the external interfaces
-- I prepared the fabrication drawing and manufacturing outputs
-- I checked the final PCB using Altium DRC
+
+- Microchip **LAN7800** USB 3.1 Gen 1 to Gigabit Ethernet controller
+- USB 2.0 and USB 3.x interfaces
+- Gigabit Ethernet MDI interface to RJ45 MagJack
+- **4-layer PCB** with dedicated internal ground reference planes
+- **90 Ω differential impedance** target for USB
+- **100 Ω differential impedance** target for Gigabit Ethernet
+- Dedicated Altium **net classes, differential-pair classes and routing rules**
+- Length matching and controlled pair spacing for high-speed interfaces
+- Separate power routing/pours for the LAN7800 supply rails
+- ESD/protection components positioned close to the external interfaces
+- Fabrication drawing and manufacturing output preparation
+- Final PCB checked using Altium DRC
 
 ## High-Speed Design Approach
 
