@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # USB 3.1 Gen 1 to Gigabit Ethernet Adapter
 
 LAN7800-based USB 3.1 Gen 1 to Gigabit Ethernet adapter designed in **Altium Designer** as a high-speed hardware and PCB design portfolio project.
@@ -84,7 +84,7 @@ The design is split into two functional sheets: **USB/power** and **LAN7800/Ethe
 
 **[View the complete schematic PDF](Docs/LAN7800_USB_Ethernet_RevA_Schematic.pdf)**
 
-**[View the Rev A fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.pdf)**
+**[View the Rev A fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
 
 ## Design Verification
 
@@ -146,7 +146,4 @@ The public repository is intentionally kept concise so the design can be reviewe
 ---
 
 **Designed by Caoilte Donohoe**
-=======
-# USB3-Gigabit-Ethernet-Adapter-Portfolio
-LAN7800-based USB 3.1 Gen 1 to Gigabit Ethernet adapter designed in Altium Designer.
->>>>>>> 4d1325f28cd65206329217c549f851044ffaa827
+
