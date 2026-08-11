@@ -82,9 +82,9 @@ The design is split into two functional sheets: **USB/power** and **LAN7800/Ethe
 
 </details>
 
-**[View the complete schematic PDF](Docs/LAN7800_USB_Ethernet_RevA_Schematic.PDF)**
+**[View the complete schematic PDF](Docs/LAN7800_USB_Ethernet_RevA_Schematic.pdf)**
 
-**[View the Rev A fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.pdf)**
+**[View the Rev A fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
 
 ## Design Verification
 
