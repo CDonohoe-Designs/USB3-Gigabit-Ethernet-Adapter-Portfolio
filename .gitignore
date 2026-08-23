@@ -1,0 +1,58 @@
+# USB3-Gigabit-Ethernet-Adapter-Portfolio
+# Keep editable Altium source and intentional fabrication/documentation outputs.
+# Ignore generated Altium files, local history/cache data and OS clutter.
+
+# Altium generated folders
+**/History/
+**/__Previews/
+**/__Previews__/
+**/Project Outputs*/
+**/Project Outputs for*/
+**/Project Logs*/
+**/Project Logs for*/
+**/Generated/
+**/Generated Documents/
+
+# Altium previews / structural caches
+*.SchDocPreview
+*.PcbDocPreview
+*.PrjPcbStructure
+*.PrjPcbVariants
+
+# Generated reports / logs
+*MessageListReport*
+*Design Rule Check*.html
+*Design Rule Check*.drc
+*.DRC
+*.ERC
+*.REP
+*.rpt
+*.log
+*.LOG
+*.err
+
+# Temporary / backup files
+*.~*
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Compiled libraries
+*.IntLib
+
+# OS / editor clutter
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Intentionally versioned
+# Hardware/Altium/*.PrjPcb
+# Hardware/Altium/*.SchDoc
+# Hardware/Altium/*.PcbDoc
+# Hardware/Altium/*.PcbLib
+# Hardware/Altium/*.OutJob
+# Docs/*.pdf
+# Manufacturing/*.zip
