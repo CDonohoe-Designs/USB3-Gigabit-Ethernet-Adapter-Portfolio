@@ -31,6 +31,10 @@
 *.LOG
 *.err
 
+# Local expanded fabrication outputs
+# Keep the curated Rev A fabrication ZIP in Git; ignore locally extracted/generated files.
+Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication/
+
 # Temporary / backup files
 *.~*
 *.tmp
