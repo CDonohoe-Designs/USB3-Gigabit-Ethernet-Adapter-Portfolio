@@ -6,6 +6,34 @@ LAN7800-based **USB 5 Gbit/s (USB 3.2 Gen 1, formerly USB 3.1 Gen 1)** to Gigabi
   <img src="Images/PCB_3D.PNG" alt="LAN7800 USB to Gigabit Ethernet adapter 3D view" width="850">
 </p>
 
+## 2-Minute Engineering Review
+
+I designed this project as a complete **high-speed digital hardware exercise**, taking the design from architecture and schematic capture through controlled-impedance PCB layout, rule-driven verification and fabrication outputs.
+
+### Engineering focus
+
+- **High-speed interfaces** — USB 5 Gbit/s SuperSpeed, USB 2.0 and Gigabit Ethernet on the same board
+- **Signal integrity** — 90 Ω USB and 100 Ω Ethernet differential-impedance targets
+- **Return-path control** — continuous reference structure and deliberate avoidance of unnecessary layer transitions
+- **Constraint-driven layout** — Altium net classes, differential-pair classes, matched-length rules and layer restrictions
+- **Power integrity** — local decoupling and separate LAN7800 supply routing/pours
+- **Protection / EMC intent** — ESD protection close to external interfaces and controlled current-return paths
+- **Manufacturing readiness** — fabrication drawing, Gerber X2, NC Drill and final Altium DRC
+
+### Quick review
+
+- **[Complete schematic](Docs/LAN7800_USB_Ethernet_RevA_Schematic.pdf)**
+- **[PCB top layout](Images/PCB_Layout_Top.PNG)**
+- **[PCB bottom / power layout](Images/PCB_Layout_Bottom.PNG)**
+- **[High-speed design rules](Images/Design_Rules/)**
+- **[Final DRC result](Images/DRC.PNG)**
+- **[Fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
+- **[Editable Altium source](Hardware/Altium/)**
+
+> **Current status:** schematic, PCB layout, design-rule verification and manufacturing outputs are complete. The repository presents the design and fabrication package as portfolio evidence rather than claiming physical product validation.
+
+---
+
 ## Project Overview
 
 I designed this board to convert a **USB 5 Gbit/s host connection** to **10/100/1000BASE-T Ethernet** using the Microchip **LAN7800** USB-to-Ethernet controller.
