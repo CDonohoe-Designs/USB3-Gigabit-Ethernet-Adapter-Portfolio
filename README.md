@@ -1,24 +1,23 @@
-# USB 3.1 Gen 1 to Gigabit Ethernet Adapter
+# USB 5 Gbit/s to Gigabit Ethernet Adapter
 
-LAN7800-based USB 3.1 Gen 1 to Gigabit Ethernet adapter designed in **Altium Designer** as a high-speed hardware and PCB design portfolio project.
+LAN7800-based **USB 5 Gbit/s (USB 3.2 Gen 1, formerly USB 3.1 Gen 1)** to Gigabit Ethernet adapter designed in **Altium Designer** as a high-speed hardware and PCB design portfolio project.
 
 <p align="center">
-  <img src="Images/PCB_3D.PNG" alt="LAN7800 USB 3.1 to Gigabit Ethernet adapter 3D view" width="850">
+  <img src="Images/PCB_3D.PNG" alt="LAN7800 USB to Gigabit Ethernet adapter 3D view" width="850">
 </p>
 
 ## Project Overview
 
-I designed this board to convert a **USB 3.1 Gen 1 (5 Gbit/s)** host connection to **10/100/1000BASE-T Ethernet** using the Microchip **LAN7800** USB-to-Ethernet controller.
+I designed this board to convert a **USB 5 Gbit/s host connection** to **10/100/1000BASE-T Ethernet** using the Microchip **LAN7800** USB-to-Ethernet controller.
 
 I developed the project to demonstrate the complete hardware design process rather than schematic capture alone, including component selection, power architecture, controlled-impedance routing, high-speed PCB constraints, grounding and return-path control, manufacturability rules, DRC, and fabrication documentation.
 
 ### Key design features
 
-
-- Microchip **LAN7800** USB 3.1 Gen 1 to Gigabit Ethernet controller
-- USB 2.0 and USB 3.x interfaces
+- Microchip **LAN7800** USB-to-Gigabit-Ethernet controller
+- USB 2.0 and USB 5 Gbit/s SuperSpeed interfaces
 - Gigabit Ethernet MDI interface to RJ45 MagJack
-- **4-layer PCB** with dedicated internal ground reference planes
+- **4-layer PCB** with dedicated internal reference structure
 - **90 Ω differential impedance** target for USB
 - **100 Ω differential impedance** target for Gigabit Ethernet
 - Dedicated Altium **net classes, differential-pair classes and routing rules**
@@ -35,16 +34,15 @@ I treated the PCB as a **high-speed design**, with the layout driven by signal-i
 The main design methods I used were:
 
 - **Controlled impedance:** dedicated Altium impedance profiles were created for 90 Ω USB and 100 Ω Ethernet differential routing.
-- **Differential-pair classes:** USB 2.0, USB 3.x and Ethernet MDI signals were separated into dedicated classes so interface-specific constraints could be applied consistently.
+- **Differential-pair classes:** USB 2.0, USB SuperSpeed and Ethernet MDI signals were separated into dedicated classes so interface-specific constraints could be applied consistently.
 - **Length matching:** matched-length rules were used to control skew within high-speed differential pairs, with separate Ethernet pair-to-pair matching constraints.
-- **Continuous reference planes:** the high-speed signals are routed primarily on the outer signal layer over an adjacent solid ground reference plane.
+- **Continuous reference planes:** the high-speed signals are routed primarily on the outer signal layer over an adjacent solid reference plane.
 - **Layer restrictions:** high-speed classes were constrained to intended routing layers to avoid unnecessary layer changes and reference-plane discontinuities.
 - **Controlled spacing and clearance:** dedicated rules were used for pair geometry, pair-to-pair spacing and clearance from unrelated copper.
 - **Via control:** separate via styles were defined for general and higher-current power routing.
 - **Power integrity:** local power pours, short decoupling paths and large ground regions were used around the LAN7800 and its regulators.
 - **Manufacturing constraints:** minimum annular ring, drilled-hole, solder-mask and silkscreen rules were included in the PCB rule set.
 - **Rule-driven verification:** Altium's PCB Rules and Constraints system and DRC were used to check that the physical implementation remained consistent with the design intent.
-
 
 ## PCB Layout
 
@@ -58,7 +56,7 @@ I used the top layer for the principal signal routing, including the USB and Eth
 
 ### Bottom side — power and ground distribution
 
-I used the bottom side for local power distribution together with a broad GND copper pour. The internal ground planes provide the primary high-speed reference structure.
+I used the bottom side for local power distribution together with a broad GND copper pour. The internal reference structure provides the primary high-speed return path.
 
 <p align="center">
   <img src="Images/PCB_Layout_Bottom.PNG" alt="Bottom PCB layout showing power and ground pours" width="850">
@@ -134,6 +132,12 @@ I used a rule-driven approach rather than manually routing each interface with a
 </p>
 
 </details>
+
+## Source portability
+
+I keep the repository focused on the project-owned source required to inspect the design: the Altium project, schematic sheets, PCB and project PCB library. Local-only references to downloaded component libraries, generated outputs and unrelated files are intentionally excluded from the portfolio project.
+
+Manufacturer CAD packages are not redistributed here. The instantiated schematic and PCB data remain available in the project design files for review.
 
 ## Repository Contents
 
