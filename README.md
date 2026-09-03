@@ -3,7 +3,7 @@
 LAN7800-based **USB 5 Gbit/s (USB 3.2 Gen 1, formerly USB 3.1 Gen 1)** to Gigabit Ethernet adapter designed in **Altium Designer** as a high-speed hardware and PCB design portfolio project.
 
 <p align="center">
-  <img src="Images/PCB_3D.PNG" alt="LAN7800 USB to Gigabit Ethernet adapter 3D view" width="850">
+  <img src="Images/3D_FrontProfile_Manufactured.png" alt="LAN7800 USB to Gigabit Ethernet adapter 3D view" width="850">
 </p>
 
 ## 2-Minute Engineering Review
