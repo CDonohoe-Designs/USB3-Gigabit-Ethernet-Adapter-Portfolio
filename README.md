@@ -22,6 +22,7 @@ I designed this project as a complete **high-speed digital hardware exercise**, 
 
 ### Quick review
 
+- **[Hardware Design Review — Rev 1.1 (PDF)](Docs/Design_Review/LAN7800_USB_Ethernet_RevA_Hardware_Design_Review_Rev1.1.pdf)**
 - **[Complete schematic](Docs/LAN7800_USB_Ethernet_RevA_Schematic.pdf)**
 - **[PCB top layout](Images/PCB_Layout_Top.PNG)**
 - **[PCB bottom / power layout](Images/PCB_Layout_Bottom.PNG)**
@@ -178,7 +179,7 @@ Manufacturer CAD packages are not redistributed here. The instantiated schematic
 
 ```text
 Hardware/Altium/   Editable Altium schematic and PCB source
-Docs/              Schematic and fabrication PDFs
+Docs/              Schematic PDF, fabrication drawing and Design_Review/
 Images/            PCB, schematic and selected design-rule images
 Manufacturing/     BoM/ workbook, CPL/ placement CSV, GerberX2/,
                    NC Drill/ and Rev A fabrication drawing
