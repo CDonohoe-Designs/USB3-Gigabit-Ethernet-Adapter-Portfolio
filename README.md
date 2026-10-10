@@ -18,7 +18,7 @@ I designed this project as a complete **high-speed digital hardware exercise**, 
 - **Constraint-driven layout** — Altium net classes, differential-pair classes, matched-length rules and layer restrictions
 - **Power integrity** — local decoupling and separate LAN7800 supply routing/pours
 - **Protection / EMC intent** — ESD protection close to external interfaces and controlled current-return paths
-- **Manufacturing readiness** — fabrication drawing, Gerber X2, NC Drill and final Altium DRC
+- **Manufacturing handoff** — fabrication drawing, Gerber X2, NC Drill, component BOM, pick-and-place coordinates and final Altium DRC
 
 ### Quick review
 
@@ -28,6 +28,9 @@ I designed this project as a complete **high-speed digital hardware exercise**, 
 - **[High-speed design rules](Images/Design_Rules/)**
 - **[Final DRC result](Images/DRC.PNG)**
 - **[Fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
+- **[Rev A component BOM (.xlsx)](Manufacturing/BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx)**
+- **[Rev A component placement / CPL (.csv)](Manufacturing/CPL/LAN7800_USB_Ethernet_RevA_CPL.csv)**
+- **[Rev A Gerber X2 and NC Drill package](Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication.zip)**
 - **[Editable Altium source](Hardware/Altium/)**
 
 > **Current status:** schematic, PCB layout, design-rule verification and manufacturing outputs are complete. The repository presents the design and fabrication package as portfolio evidence rather than claiming physical product validation.
@@ -52,7 +55,7 @@ I developed the project to demonstrate the complete hardware design process rath
 - Length matching and controlled pair spacing for high-speed interfaces
 - Separate power routing/pours for the LAN7800 supply rails
 - ESD/protection components positioned close to the external interfaces
-- Fabrication drawing and manufacturing output preparation
+- Fabrication drawing, Gerber/drill outputs, showcase BOM and placement coordinate list
 - Final PCB checked using Altium DRC
 
 ## High-Speed Design Approach
@@ -114,6 +117,10 @@ The design is split into two functional sheets: **USB/power** and **LAN7800/Ethe
 **[Download the Rev A fabrication package](Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication.zip)**  
 Gerber X2, NC Drill and fabrication documentation.
 
+**[Rev A Bill of Materials — XLSX](Manufacturing/BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx)** — 22 component groups / 48 placements, with manufacturer selections and engineering review notes. The workbook's *Production Approved — Portfolio Simulation* classification is illustrative; part sourcing and the assumed C5 value are not independent production sign-off.
+
+**[Rev A Component Placement List — CSV](Manufacturing/CPL/LAN7800_USB_Ethernet_RevA_CPL.csv)** — coordinates, rotations and board-side assignments for 48 components, exported from Altium. Placement origin and rotations require assembly-house confirmation before physical manufacture.
+
 ## Design Verification
 
 I ran a final Altium **Design Rule Check** against the configured PCB rule set after completing the layout and copper pours. The final report shows **0 warnings and 0 rule violations**.
@@ -173,7 +180,7 @@ Manufacturer CAD packages are not redistributed here. The instantiated schematic
 Hardware/Altium/   Editable Altium schematic and PCB source
 Docs/              Schematic and fabrication PDFs
 Images/            PCB, schematic and selected design-rule images
-Manufacturing/     Rev A Gerber X2 and NC Drill fabrication package
+Manufacturing/     Rev A fabrication ZIP, BoM/ workbook and CPL/ placement CSV
 ```
 
 **Designed by Caoilte Donohoe**
