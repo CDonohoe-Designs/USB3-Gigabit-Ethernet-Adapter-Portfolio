@@ -30,7 +30,7 @@ I designed this project as a complete **high-speed digital hardware exercise**, 
 - **[Fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
 - **[Rev A component BOM (.xlsx)](Manufacturing/BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx)**
 - **[Rev A component placement / CPL (.csv)](Manufacturing/CPL/LAN7800_USB_Ethernet_RevA_CPL.csv)**
-- **[Rev A Gerber X2 and NC Drill files](Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication/)**
+- **[Rev A Gerber X2 and NC Drill files](Manufacturing/)**
 - **[Editable Altium source](Hardware/Altium/)**
 
 > **Current status:** schematic, PCB layout, design-rule verification and manufacturing outputs are complete. The repository presents the design and fabrication package as portfolio evidence rather than claiming physical product validation.
@@ -114,8 +114,8 @@ The design is split into two functional sheets: **USB/power** and **LAN7800/Ethe
 
 **[View the Rev A fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
 
-**[Browse the Rev A fabrication files](Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication/)**  
-Browse the extracted Gerber X2, plated/non-plated drill and fabrication documentation directly in GitHub.
+**[Browse the Rev A fabrication files](Manufacturing/)**  
+Browse the [Gerber X2 files](Manufacturing/GerberX2/), [NC Drill files](Manufacturing/NC%20Drill/) and [fabrication drawing](Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication.PDF) directly in GitHub.
 
 **[Rev A Bill of Materials — XLSX](Manufacturing/BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx)** — 22 component groups / 48 placements, with manufacturer selections and engineering review notes. The workbook's *Production Approved — Portfolio Simulation* classification is illustrative; part sourcing and the assumed C5 value are not independent production sign-off.
 
@@ -180,8 +180,8 @@ Manufacturer CAD packages are not redistributed here. The instantiated schematic
 Hardware/Altium/   Editable Altium schematic and PCB source
 Docs/              Schematic and fabrication PDFs
 Images/            PCB, schematic and selected design-rule images
-Manufacturing/     Rev A GerberX2/ and NC Drill/ files, fabrication drawing,
-                   BoM/ workbook and CPL/ placement CSV
+Manufacturing/     BoM/ workbook, CPL/ placement CSV, GerberX2/,
+                   NC Drill/ and Rev A fabrication drawing
 ```
 
 **Designed by Caoilte Donohoe**
