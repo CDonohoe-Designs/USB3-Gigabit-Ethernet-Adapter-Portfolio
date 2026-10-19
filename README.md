@@ -1,188 +1,128 @@
-# USB 5 Gbit/s to Gigabit Ethernet Adapter
+# LAN7800 — USB 3.0 to Gigabit Ethernet Adapter
 
-LAN7800-based **USB 5 Gbit/s (USB 3.2 Gen 1, formerly USB 3.1 Gen 1)** to Gigabit Ethernet adapter designed in **Altium Designer** as a high-speed hardware and PCB design portfolio project.
+I developed this LAN7800-based adapter in Altium Designer, taking it from system definition and component selection through schematic capture, four-layer PCB layout, design review and manufacturing documentation. The hardware revision is **Rev A**.
 
-<p align="center">
-  <img src="Images/3D_FrontProfile_Manufactured.png" alt="LAN7800 USB to Gigabit Ethernet adapter 3D view" width="850">
-</p>
-
-## 2-Minute Engineering Review
-
-I designed this project as a complete **high-speed digital hardware exercise**, taking the design from architecture and schematic capture through controlled-impedance PCB layout, rule-driven verification and fabrication outputs.
-
-### Engineering focus
-
-- **High-speed interfaces** — USB 5 Gbit/s SuperSpeed, USB 2.0 and Gigabit Ethernet on the same board
-- **Signal integrity** — 90 Ω USB and 100 Ω Ethernet differential-impedance targets
-- **Return-path control** — continuous reference structure and deliberate avoidance of unnecessary layer transitions
-- **Constraint-driven layout** — Altium net classes, differential-pair classes, matched-length rules and layer restrictions
-- **Power integrity** — local decoupling and separate LAN7800 supply routing/pours
-- **Protection / EMC intent** — ESD protection close to external interfaces and controlled current-return paths
-- **Manufacturing handoff** — fabrication drawing, Gerber X2, NC Drill, component BOM, pick-and-place coordinates and final Altium DRC
-
-### Quick review
-
-- **[Hardware Design Review — Rev 1.1 (PDF)](Docs/Design_Review/LAN7800_USB_Ethernet_RevA_Hardware_Design_Review_Rev1.1.pdf)**
-- **[Complete schematic](Docs/LAN7800_USB_Ethernet_RevA_Schematic.pdf)**
-- **[PCB top layout](Images/PCB_Layout_Top.PNG)**
-- **[PCB bottom / power layout](Images/PCB_Layout_Bottom.PNG)**
-- **[High-speed design rules](Images/Design_Rules/)**
-- **[Final DRC result](Images/DRC.PNG)**
-- **[Fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
-- **[Rev A component BOM (.xlsx)](Manufacturing/BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx)**
-- **[Rev A component placement / CPL (.csv)](Manufacturing/CPL/LAN7800_USB_Ethernet_RevA_CPL.csv)**
-- **[Rev A Gerber X2 and NC Drill files](Manufacturing/)**
-- **[Editable Altium source](Hardware/Altium/)**
-
-> **Current status:** schematic, PCB layout, design-rule verification and manufacturing outputs are complete. The repository presents the design and fabrication package as portfolio evidence rather than claiming physical product validation.
-
----
-
-## Project Overview
-
-I designed this board to convert a **USB 5 Gbit/s host connection** to **10/100/1000BASE-T Ethernet** using the Microchip **LAN7800** USB-to-Ethernet controller.
-
-I developed the project to demonstrate the complete hardware design process rather than schematic capture alone, including component selection, power architecture, controlled-impedance routing, high-speed PCB constraints, grounding and return-path control, manufacturability rules, DRC, and fabrication documentation.
-
-### Key design features
-
-- Microchip **LAN7800** USB-to-Gigabit-Ethernet controller
-- USB 2.0 and USB 5 Gbit/s SuperSpeed interfaces
-- Gigabit Ethernet MDI interface to RJ45 MagJack
-- **4-layer PCB** with dedicated internal reference structure
-- **90 Ω differential impedance** target for USB
-- **100 Ω differential impedance** target for Gigabit Ethernet
-- Dedicated Altium **net classes, differential-pair classes and routing rules**
-- Length matching and controlled pair spacing for high-speed interfaces
-- Separate power routing/pours for the LAN7800 supply rails
-- ESD/protection components positioned close to the external interfaces
-- Fabrication drawing, Gerber/drill outputs, showcase BOM and placement coordinate list
-- Final PCB checked using Altium DRC
-
-## High-Speed Design Approach
-
-I treated the PCB as a **high-speed design**, with the layout driven by signal-integrity and return-path requirements rather than by simple point-to-point connectivity.
-
-The main design methods I used were:
-
-- **Controlled impedance:** dedicated Altium impedance profiles were created for 90 Ω USB and 100 Ω Ethernet differential routing.
-- **Differential-pair classes:** USB 2.0, USB SuperSpeed and Ethernet MDI signals were separated into dedicated classes so interface-specific constraints could be applied consistently.
-- **Length matching:** matched-length rules were used to control skew within high-speed differential pairs, with separate Ethernet pair-to-pair matching constraints.
-- **Continuous reference planes:** the high-speed signals are routed primarily on the outer signal layer over an adjacent solid reference plane.
-- **Layer restrictions:** high-speed classes were constrained to intended routing layers to avoid unnecessary layer changes and reference-plane discontinuities.
-- **Controlled spacing and clearance:** dedicated rules were used for pair geometry, pair-to-pair spacing and clearance from unrelated copper.
-- **Via control:** separate via styles were defined for general and higher-current power routing.
-- **Power integrity:** local power pours, short decoupling paths and large ground regions were used around the LAN7800 and its regulators.
-- **Manufacturing constraints:** minimum annular ring, drilled-hole, solder-mask and silkscreen rules were included in the PCB rule set.
-- **Rule-driven verification:** Altium's PCB Rules and Constraints system and DRC were used to check that the physical implementation remained consistent with the design intent.
-
-## PCB Layout
-
-### Top side
-
-I used the top layer for the principal signal routing, including the USB and Ethernet differential interfaces and the LAN7800 support circuitry.
+The completed schematic and PCB reviews are kept as separate records. The manufacturing package is supported by **USBGE-CTRL-001**, a five-sheet document-control register with document references, revision history and file traceability.
 
 <p align="center">
-  <img src="Images/PCB_Layout_Top.PNG" alt="Top PCB layout" width="850">
+  <img src="Images/PCB_3D.PNG" alt="Altium 3D view of the LAN7800 Rev A PCB, showing the USB Type-B connector, LAN7800 controller and Ethernet MagJack" width="850">
 </p>
 
-### Bottom side — power and ground distribution
+*Altium 3D view of the Rev A design.*
 
-I used the bottom side for local power distribution together with a broad GND copper pour. The internal reference structure provides the primary high-speed return path.
+## Engineering Workflow & Process
 
-<p align="center">
-  <img src="Images/PCB_Layout_Bottom.PNG" alt="Bottom PCB layout showing power and ground pours" width="850">
-</p>
+![LAN7800 engineering workflow: system definition, component engineering, hardware development, design review, manufacturing preparation, and document control and handover](Images/Portfolio/LAN7800_Engineering_Workflow.svg)
 
-## Schematic
+[Editable workflow SVG](Images/Portfolio/LAN7800_Engineering_Workflow.svg) · [Rev A manufacturing evidence](Manufacturing/) · [Document-control register](Manufacturing/USBGE-CTRL-001_Document_Control_Register.xlsx)
 
-The design is split into two functional sheets: **USB/power** and **LAN7800/Ethernet**.
+## 01 — System Definition
 
-<p align="center">
-  <img src="Images/Schematic_Overview.png" alt="LAN7800 and Ethernet schematic overview" width="780">
-</p>
+I defined the board around a USB 3.0 host connection and a Gigabit Ethernet interface using the Microchip LAN7800. The schematic separates the USB interface and power supply from the LAN7800 controller and Ethernet circuitry, making the interface and supply requirements easier to follow.
+
+The two native schematic sheets are [USB and power](Hardware/Altium/01_USB_B_and_Power.SchDoc) and [LAN7800 and Ethernet](Hardware/Altium/02_LAN7800_Controller.SchDoc). The schematic extract below provides a readable view of the USB and power sheet. The full schematic PDF is retained locally because it contains workstation paths.
 
 <details>
-<summary><b>View USB and power schematic overview</b></summary>
+<summary>View the USB and power schematic extract</summary>
 
-<p align="center">
-  <img src="Images/Schematic_Overview_Power_USB.png" alt="USB and power schematic overview" width="780">
-</p>
+![USB Type-B interface and power-supply schematic extract](Images/Schematic_Overview_Power_USB.png)
 
 </details>
 
-**[View the complete schematic PDF](Docs/LAN7800_USB_Ethernet_RevA_Schematic.pdf)**
+## 02 — Component Engineering
 
-**[View the Rev A fabrication drawing](Docs/LAN7800_USB_Ethernet_RevA_Fabrication.PDF)**
+I selected the LAN7800, USB connector, Ethernet MagJack and power regulator as part of the same board-level design. The Rev A BOM records component specifications, footprints, manufacturer names, manufacturer part numbers and approval classifications. These fields provide the component-selection and BOM/AVL information for the project.
 
-**[Browse the Rev A fabrication files](Manufacturing/)**  
-Browse the [Gerber X2 files](Manufacturing/GerberX2/), [NC Drill files](Manufacturing/NC%20Drill/) and [fabrication drawing](Manufacturing/LAN7800_USB_Ethernet_RevA_Fabrication.PDF) directly in GitHub.
+| Component area | Existing engineering evidence |
+| --- | --- |
+| LAN7800 controller and Ethernet MagJack | [Controller and Ethernet schematic](Hardware/Altium/02_LAN7800_Controller.SchDoc) |
+| USB connector and power regulator | [USB and power schematic](Hardware/Altium/01_USB_B_and_Power.SchDoc) |
+| BOM / AVL information | [Rev A component BOM](Manufacturing/01_BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx) |
 
-**[Rev A Bill of Materials — XLSX](Manufacturing/BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx)** — 22 component groups / 48 placements, with manufacturer selections and engineering review notes. The workbook's *Production Approved — Portfolio Simulation* classification is illustrative; part sourcing and the assumed C5 value are not independent production sign-off.
+## 03 — Hardware Development
 
-**[Rev A Component Placement List — CSV](Manufacturing/CPL/LAN7800_USB_Ethernet_RevA_CPL.csv)** — coordinates, rotations and board-side assignments for 48 components, exported from Altium. Placement origin and rotations require assembly-house confirmation before physical manufacture.
+I captured the schematics and developed the four-layer PCB in Altium. The layout brings the USB and Ethernet interfaces together with the controller support circuitry and power distribution. I used differential-pair routing rules, impedance profiles and matched-length constraints to guide the high-speed routing.
 
-## Design Verification
+![Altium top-layer PCB layout of the LAN7800 Rev A design](Images/PCB_Layout_Top.PNG)
 
-I ran a final Altium **Design Rule Check** against the configured PCB rule set after completing the layout and copper pours. The final report shows **0 warnings and 0 rule violations**.
-
-<p align="center">
-  <img src="Images/DRC.PNG" alt="Altium final DRC report showing zero warnings and zero rule violations" width="850">
-</p>
-
-## Altium Design Rules
-
-I used a rule-driven approach rather than manually routing each interface with ad-hoc settings. Representative rule configuration is shown below.
+The [native PCB](Hardware/Altium/LAN7800_USB_Ethernet_RevA.PcbDoc), [stack-up specification](Manufacturing/07_Engineering/Stackup/USBGE-ENG-002_Stack_Impedance_Rules.pdf) and [layer-stack record](Manufacturing/07_Engineering/Stackup/USBGE-ENG-006_Layer_Stack.csv) document the implementation.
 
 <details>
-<summary><b>View high-speed stack-up, impedance and rule configuration</b></summary>
+<summary>View the bottom layout and selected routing-rule evidence</summary>
 
-### Layer stack
+![Bottom PCB layout showing power and ground distribution](Images/PCB_Layout_Bottom.PNG)
 
-<p align="center">
-  <img src="Images/Design_Rules/01_Layer_Stack.PNG" alt="4-layer PCB stack-up" width="850">
-</p>
-
-### Controlled-impedance profiles
-
-<p align="center">
-  <img src="Images/Design_Rules/02_Impedance_Profiles.png" alt="USB and Ethernet impedance profiles" width="850">
-</p>
-
-### Net classes
-
-<p align="center">
-  <img src="Images/Design_Rules/03_Net_Classes.png" alt="Altium net classes" width="850">
-</p>
-
-### Differential-pair routing rules
-
-<p align="center">
-  <img src="Images/Design_Rules/05_Differential_Pair_Routing_Rules.png" alt="Differential pair routing rules" width="850">
-</p>
-
-### Matched-length rules
-
-<p align="center">
-  <img src="Images/Design_Rules/10_Matched_Length_Rules.png" alt="Matched length rules" width="850">
-</p>
+- [Altium layer-stack configuration](Images/Design_Rules/01_Layer_Stack.PNG)
+- [Impedance profiles](Images/Design_Rules/02_Impedance_Profiles.png)
+- [Net classes](Images/Design_Rules/03_Net_Classes.png)
+- [Differential-pair routing rules](Images/Design_Rules/05_Differential_Pair_Routing_Rules.png)
+- [Matched-length rules](Images/Design_Rules/10_Matched_Length_Rules.png)
 
 </details>
 
-## Source portability
+## 04 — Design Review
 
-I keep the repository focused on the project-owned source required to inspect the design: the Altium project, schematic sheets, PCB and project PCB library. Local-only references to downloaded component libraries, generated outputs and unrelated files are intentionally excluded from the portfolio project.
+I documented the schematic review and PCB review separately. Both are revision **1.1**, dated **18 October 2026**, and record closed review status. The reviews use sectioned tables with a reference, review check, comments or evidence, and disposition, so the closure record remains attached to each check.
 
-Manufacturer CAD packages are not redistributed here. The instantiated schematic and PCB data remain available in the project design files for review.
+| Review record | Coverage and evidence |
+| --- | --- |
+| [Completed schematic review](Manufacturing/07_Engineering/Design_Review/LAN7800_Schematic_Review.docx) | Requirements and architecture, power, communications, external I/O, and manufacturing documentation |
+| [Completed PCB review](Manufacturing/07_Engineering/Design_Review/LAN7800_PCB_Review.docx) | Board outline and stack-up, placement, power distribution, routing, grounding, and fabrication/assembly |
+| Existing schematic ERC report | Retained locally; the original HTML contains workstation paths |
+| Existing PCB DRC report | Retained locally; the original HTML contains workstation paths |
 
-## Repository Contents
+The [review folder](Manufacturing/07_Engineering/Design_Review/) contains the two completed review records. Their conclusions, evidence and dispositions are unchanged. The combined design-review PDF is retained locally because it contains workstation paths.
+
+## 05 — Manufacturing Preparation
+
+I organised the fabrication and assembly deliverables into the Rev A manufacturing package. The package includes the board artwork and drill data, component selection and placement records, and drawings for fabrication and assembly.
+
+| Deliverable | File or folder |
+| --- | --- |
+| BOM / AVL information | [Rev A BOM workbook](Manufacturing/01_BoM/LAN7800_USB_Ethernet_RevA_BOM.xlsx) |
+| Component placement | [CPL workbook](Manufacturing/03_CPL/LAN7800_USB_Ethernet_RevA_CPL.xlsx); the original CSV is retained locally because it contains a workstation path |
+| PCB artwork | [Gerber X2 files](Manufacturing/02_GerberX2/) |
+| Drill data | [NC drill files](Manufacturing/04_NC%20Drill/) |
+| Fabrication drawing | [Rev A fabrication PDF](Manufacturing/05_Fabrication/LAN7800_USB_Ethernet_RevA_Fabrication.pdf) |
+| Fabrication requirements | [USBGE-FAB-001](Manufacturing/05_Fabrication/USBGE-FAB-001_Fabrication_Instructions.pdf) |
+| Assembly drawing | [Rev A assembly PDF](Manufacturing/06_Assembly/LAN7800_USB_Ethernet_RevA_Assembly.pdf) |
+| Assembly inspection | [Inspection checklist](Manufacturing/06_Assembly/LAN7800_USB_Ethernet_RevA_Assembly_Inspection_Checklist.xlsx) |
+
+The existing [test and quality folder](Manufacturing/08_Test_Quality/) contains procedures, traceability documents and blank inspection/test records. These are documentation deliverables; blank records are not presented as completed hardware tests.
+
+## 06 — Document Control & Handover
+
+I restructured the file inventory into [USBGE-CTRL-001 — Document Control Register](Manufacturing/USBGE-CTRL-001_Document_Control_Register.xlsx). It separates controlled engineering documents from generated manufacturing files and native source references, while keeping a revision-history record of the register changes.
+
+| Worksheet | Purpose |
+| --- | --- |
+| **Document Control** | Project identification, document number, independent document revision, hardware Rev A, owner, status and approval fields |
+| **Document Register** | Drawings, reports, procedures, reviews and specifications, with their recorded identifiers, revisions, statuses and locations |
+| **Manufacturing Files** | BOM, CPL, Gerbers, drills and associated file checksums |
+| **Source References** | Native Altium files referenced at their original location, explicitly external to the manufacturing package |
+| **Revision History** | Document-control changes and the old/new register filename mapping |
+
+The register is included unchanged as the control record for the complete Rev A package, rather than as an index limited to this public subset. Some register targets are intentionally omitted here or refer to local source versions not copied into this publication.
+
+Relative file hyperlinks and SHA-256 checksums support file traceability. Legacy entry numbers retain the connection to the earlier inventory. Hardware **Rev A** is kept separate from each document's revision, and existing document statuses are preserved. The register is **Rev 1.0**, owned and prepared by **Caoilte Donohoe**, with status **For approval**. Formal review, approval and effective-date fields remain pending.
+
+The authoritative editable design remains in [Hardware/Altium](Hardware/Altium/), including the [Altium project](Hardware/Altium/LAN7800_USB_Ethernet_RevA.PrjPcb). The complete manufacturing package references those source files without maintaining a second native-design copy. This publication leaves the already committed native source files unchanged.
 
 ```text
-Hardware/Altium/   Editable Altium schematic and PCB source
-Docs/              Schematic PDF, fabrication drawing and Design_Review/
-Images/            PCB, schematic and selected design-rule images
-Manufacturing/     BoM/ workbook, CPL/ placement CSV, GerberX2/,
-                   NC Drill/ and Rev A fabrication drawing
+Hardware/Altium/                       Authoritative native design
+Images/Portfolio/                     Editable LAN7800 workflow SVG
+Manufacturing/
+  USBGE-CTRL-001_Document_Control_Register.xlsx
+  01_BoM/                             Component BOM
+  02_GerberX2/                        PCB artwork
+  03_CPL/                             Component placement
+  04_NC Drill/                        Drill program and drill report; local-path .LDP omitted
+  05_Fabrication/                     Fabrication drawing and requirements
+  06_Assembly/                        Assembly drawing and inspection checklist
+  07_Engineering/
+    Design_Review/                    Separate completed schematic and PCB reviews
+    Stackup/                          Stack-up documentation
+  08_Test_Quality/                     Test procedures and quality records
 ```
 
 **Designed by Caoilte Donohoe**

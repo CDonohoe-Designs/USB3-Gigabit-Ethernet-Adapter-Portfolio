@@ -1,0 +1,11 @@
+﻿record_id,serial,hardware_revision,document_revision,baseline_id,pcb_lot,assembly_lot,operator,date_time,station_id,software_revision,equipment_ids,calibration_due,step,measurement_or_observation,lower_limit,upper_limit,units,result,attachment_path,ncr_id,reviewer,review_date
+,,,,,,,,,,,,,PT-01,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-02,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-03,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-04,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-05,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-06,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-07,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-08,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-09,,,,,NOT EXECUTED,,,,
+,,,,,,,,,,,,,PT-10,,,,,NOT EXECUTED,,,,

@@ -1,0 +1,14 @@
+﻿order,name,material,thickness_mm,dielectric_constant
+0,Top Paste,Artwork,,
+1,Top Overlay,Artwork,,
+2,Top Solder,Solder Resist,0.01,3.500
+3,Top Layer,Copper,0.035001,
+4,Dielectric 2,IS400,0.12,4.200
+5,GND_1,Copper,0.035001,
+6,Dielectric 1,IS400,1.13,4.400
+7,GND_2,Copper,0.035001,
+8,Dielectric 3,IS400,0.12,4.200
+9,Bottom Layer,Copper,0.035001,
+10,Bottom Solder,Solder Resist,0.01,3.500
+11,Bottom Overlay,Artwork,,
+12,Bottom Paste,Artwork,,
