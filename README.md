@@ -34,7 +34,7 @@ I designed this project as a complete **high-speed digital hardware exercise**, 
 - **[Rev A Gerber X2 and NC Drill files](Manufacturing/)**
 - **[Editable Altium source](Hardware/Altium/)**
 
-> **Current status:** schematic, PCB layout, design-rule verification and manufacturing outputs are complete. The repository presents the design and fabrication package as portfolio evidence rather than claiming physical product validation.
+
 
 ---
 
