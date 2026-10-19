@@ -84,7 +84,7 @@ I organised the fabrication and assembly deliverables into the Rev A manufacturi
 | PCB artwork | [Gerber X2 files](Manufacturing/02_GerberX2/) |
 | Drill data | [NC drill files](Manufacturing/04_NC%20Drill/) |
 | Fabrication drawing | [Rev A fabrication PDF](Manufacturing/05_Fabrication/LAN7800_USB_Ethernet_RevA_Fabrication.pdf) |
-| Fabrication requirements | [USBGE-FAB-001](Manufacturing/05_Fabrication/USBGE-FAB-001_Fabrication_Instructions.pdf) |
+| Fabrication requirements | USBGE-FAB-001 — retained in the complete controlled Rev A package; excluded from this public repository |
 | Assembly drawing | [Rev A assembly PDF](Manufacturing/06_Assembly/LAN7800_USB_Ethernet_RevA_Assembly.pdf) |
 | Assembly inspection | [Inspection checklist](Manufacturing/06_Assembly/LAN7800_USB_Ethernet_RevA_Assembly_Inspection_Checklist.xlsx) |
 
