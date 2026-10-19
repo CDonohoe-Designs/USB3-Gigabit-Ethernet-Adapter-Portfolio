@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1310" viewBox="0 0 1120 1310" role="img" aria-labelledby="workflow-title workflow-description">
+  <title id="workflow-title">LAN7800 — Engineering Workflow &amp; Process</title>
+  <desc id="workflow-description">Six stages for the LAN7800 USB 3.0 to Gigabit Ethernet Adapter, hardware Rev A: System Definition, Component Engineering, Hardware Development, Design Review, Manufacturing Preparation, and Document Control and Handover.</desc>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#244A70"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .heading { fill: #173B60; font-size: 29px; font-weight: 700; }
+      .body { fill: #344C60; font-size: 25px; }
+      .number { fill: #FFFFFF; font-size: 30px; font-weight: 700; text-anchor: middle; }
+      .connector { fill: none; stroke: #244A70; stroke-width: 3; marker-end: url(#arrowhead); }
+    </style>
+  </defs>
+  <rect width="1120" height="1310" fill="#FFFFFF"/>
+  <text x="60" y="65" fill="#173B60" font-size="35" font-weight="700">LAN7800 — Engineering Workflow &amp; Process</text>
+  <text x="60" y="105" fill="#526A7D" font-size="23">USB 3.0 to Gigabit Ethernet Adapter | Hardware Rev A</text>
+  <path d="M60 127 H1060" stroke="#244A70" stroke-width="2"/>
+
+  <g id="stage-01" aria-label="01 — System Definition">
+    <rect x="60" y="150" width="1000" height="148" rx="12" fill="#EAF3FB" stroke="#C8DBEA"/>
+    <rect x="86" y="177" width="64" height="64" rx="8" fill="#244A70"/>
+    <text class="number" x="118" y="220">01</text>
+    <text class="heading" x="178" y="194">System Definition</text>
+    <text class="body" x="178" y="237"><tspan x="178">USB 3.0 to Gigabit Ethernet · LAN7800 architecture</tspan><tspan x="178" dy="35">Power requirements</tspan></text>
+  </g>
+  <path class="connector" d="M560 307 V329"/>
+
+  <g id="stage-02" aria-label="02 — Component Engineering">
+    <rect x="60" y="340" width="1000" height="148" rx="12" fill="#EDF6EF" stroke="#CFDFD3"/>
+    <rect x="86" y="367" width="64" height="64" rx="8" fill="#244A70"/>
+    <text class="number" x="118" y="410">02</text>
+    <text class="heading" x="178" y="384">Component Engineering</text>
+    <text class="body" x="178" y="427"><tspan x="178">LAN7800 · USB connector · Ethernet MagJack</tspan><tspan x="178" dy="35">Power regulator · BOM/AVL</tspan></text>
+  </g>
+  <path class="connector" d="M560 497 V519"/>
+
+  <g id="stage-03" aria-label="03 — Hardware Development">
+    <rect x="60" y="530" width="1000" height="148" rx="12" fill="#EAF3FB" stroke="#C8DBEA"/>
+    <rect x="86" y="557" width="64" height="64" rx="8" fill="#244A70"/>
+    <text class="number" x="118" y="600">03</text>
+    <text class="heading" x="178" y="574">Hardware Development</text>
+    <text class="body" x="178" y="617"><tspan x="178">Altium schematics · Four-layer PCB</tspan><tspan x="178" dy="35">USB differential routing · Stack-up</tspan></text>
+  </g>
+  <path class="connector" d="M560 687 V709"/>
+
+  <g id="stage-04" aria-label="04 — Design Review">
+    <rect x="60" y="720" width="1000" height="148" rx="12" fill="#EDF6EF" stroke="#CFDFD3"/>
+    <rect x="86" y="747" width="64" height="64" rx="8" fill="#244A70"/>
+    <text class="number" x="118" y="790">04</text>
+    <text class="heading" x="178" y="764">Design Review</text>
+    <text class="body" x="178" y="807"><tspan x="178">Schematic review · PCB review · ERC/DRC</tspan><tspan x="178" dy="35">Closed findings</tspan></text>
+  </g>
+  <path class="connector" d="M560 877 V899"/>
+
+  <g id="stage-05" aria-label="05 — Manufacturing Preparation">
+    <rect x="60" y="910" width="1000" height="148" rx="12" fill="#EAF3FB" stroke="#C8DBEA"/>
+    <rect x="86" y="937" width="64" height="64" rx="8" fill="#244A70"/>
+    <text class="number" x="118" y="980">05</text>
+    <text class="heading" x="178" y="954">Manufacturing Preparation</text>
+    <text class="body" x="178" y="997"><tspan x="178">Gerbers · NC drills · BOM/CPL</tspan><tspan x="178" dy="35">Fabrication and assembly drawings</tspan></text>
+  </g>
+  <path class="connector" d="M560 1067 V1089"/>
+
+  <g id="stage-06" aria-label="06 — Document Control and Handover">
+    <rect x="60" y="1100" width="1000" height="148" rx="12" fill="#EDF6EF" stroke="#CFDFD3"/>
+    <rect x="86" y="1127" width="64" height="64" rx="8" fill="#244A70"/>
+    <text class="number" x="118" y="1170">06</text>
+    <text class="heading" x="178" y="1144">Document Control &amp; Handover</text>
+    <text class="body" x="178" y="1187"><tspan x="178">Rev A manufacturing package · USBGE-CTRL-001</tspan><tspan x="178" dy="35">Revision history · File traceability</tspan></text>
+  </g>
+</svg>
